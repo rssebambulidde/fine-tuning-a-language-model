@@ -6,6 +6,16 @@ A hands-on demonstration of fine-tuning a language model with Microsoft Foundry 
 
 This project explores the difference between **prompt engineering** and **fine-tuning** by comparing a base GPT-4.1 model with instruction-based guidance to a fine-tuned version trained on curated travel assistant examples.
 
+## Quick Links for Recruiters
+
+- [Project Summary](#project-overview)
+- [Skills Demonstrated](#skills-demonstrated)
+- [Project Results](#project-results)
+- [Setup Guide](SETUP.md)
+- [Evaluation & Findings](FINDINGS.md)
+- [Training Data](training_data/travel-finetune-hotel.jsonl)
+- [Model Responses](results/finetuned_model_responses.md)
+
 ### Use Case
 Building a travel agency chat application that:
 - Suggests destinations and activities
