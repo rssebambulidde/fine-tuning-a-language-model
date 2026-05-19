@@ -185,22 +185,32 @@ Purpose: All test results, metrics, and response documentation
 
 ### training_data/ Directory
 
-Purpose: Documentation about training data format and samples
+Purpose: Training data and documentation about training data format
+
+---
+
+#### training_data/travel-finetune-hotel.jsonl
+**Content**: Actual training data file in JSONL format  
+**Format**: One JSON object per line with messages array  
+**Use for**: Upload directly to Foundry for fine-tuning  
+**Records**: 10 example records with system, user, and assistant messages
+
+**Use this to**: Execute the fine-tuning job
 
 ---
 
 #### training_data/training_data_sample.md
-**Content**: Training data format and sample records  
+**Content**: Training data format explanation and sample records  
 **Includes**:
 - Dataset format explanation (JSONL)
-- 3 sample training records
+- 3 sample training records (readable format)
 - Key characteristics of training data
 - Total dataset statistics
 - How data shapes model behavior
 - Source information
 - Notes for replication
 
-**Use this to understand**: What data was used to train the model
+**Use this to understand**: What data is being used to train the model
 
 ---
 
@@ -267,9 +277,10 @@ README.md (start here)
 | Question | File | Section |
 |----------|------|---------|
 | What is this project? | README.md | Overview |
-| How do I replicate it? | SETUP.md | Step-by-step |
+| How do I implement it? | SETUP.md | Step-by-step |
 | What were the results? | FINDINGS.md | Comparison |
-| What's the training data? | training_data/training_data_sample.md | Examples |
+| What training data to use? | training_data/travel-finetune-hotel.jsonl | Use this file |
+| How is the data formatted? | training_data/training_data_sample.md | Examples |
 | How much did it improve? | results/finetuned_model_responses.md | Analysis |
 | What were metrics? | results/metrics.md | Data |
 

@@ -71,7 +71,7 @@ Building a travel chat that:
    - Notice inconsistent tone
 
 4. **Start Fine-tuning** (2 min)
-   - Download training data (or use sample from [training_data/training_data_sample.md](training_data/training_data_sample.md))
+   - Use training data from [training_data/travel-finetune-hotel.jsonl](training_data/travel-finetune-hotel.jsonl)
    - Submit fine-tuning job
    - **Wait: 60-90 minutes**
 

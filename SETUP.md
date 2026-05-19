@@ -54,17 +54,20 @@ Complete step-by-step guide to replicate the fine-tuning exercise.
 ## Step 3: Prepare Training Data
 
 1. **Use Project Training Data**
-   - This project includes sample training data documentation: [training_data/training_data_sample.md](training_data/training_data_sample.md)
-   - This file contains the format explanation and example records you can use
-   - For the full production dataset, download from Microsoft Learning:
+   - This project includes the training data file: [training_data/travel-finetune-hotel.jsonl](training_data/travel-finetune-hotel.jsonl)
+   - Download this file from the project repository
+   - This is the exact JSONL format required for fine-tuning
+   
+   **Or download the original dataset:**
    ```
    https://microsoftlearning.github.io/mslearn-ai-studio/data/travel-finetune-hotel.jsonl
    ```
 
-2. **Save File**
-   - Your device may default to `.txt` extension
+2. **Save File Locally**
+   - If downloading, your device may default to `.txt` extension
    - **Important**: Remove `.txt` suffix to ensure `.jsonl` format
-   - Location: Save locally (e.g., `Downloads/travel-finetune-hotel.jsonl`)
+   - Save to a location like: `Downloads/travel-finetune-hotel.jsonl`
+   - The file must be in JSONL format (one JSON object per line)
 
 3. **Verify Format**
    - Open file in text editor
@@ -188,7 +191,7 @@ Complete step-by-step guide to replicate the fine-tuning exercise.
 | Issue | Solution |
 |-------|----------|
 | Fine-tuning takes very long | Cloud resources may be busy. Check "Monitor" tab for progress. Be patient (60-90 min is normal) |
-| Dataset fails to upload | Ensure file is `.jsonl` not `.txt`. Validate format (one JSON per line). See [training_data/training_data_sample.md](training_data/training_data_sample.md) for format reference |
+| Dataset fails to upload | Ensure file is `.jsonl` not `.txt`. Validate format (one JSON per line). Check [training_data/travel-finetune-hotel.jsonl](training_data/travel-finetune-hotel.jsonl) for reference |
 | Auto-deployment fails | Manually deploy from completed fine-tuning job details page |
 | Model not appearing in Models list | Refresh page or wait a few minutes. Check Foundry resource logs if issue persists |
 | Region not supported | Ensure you're in North Central US or Sweden Central |

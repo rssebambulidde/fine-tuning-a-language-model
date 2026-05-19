@@ -104,7 +104,8 @@ Ask engaging questions to help someone plan their trip and think about what they
 │   ├── base_model_responses.md  # Base model test results
 │   └── finetuned_model_responses.md  # Fine-tuned model test results
 ├── training_data/
-│   └── training_data_sample.md  # Sample of JSONL training data
+│   ├── travel-finetune-hotel.jsonl  # Training data (use this file)
+│   └── training_data_sample.md      # Training data format explanation
 └── images/
     └── screenshots/            # Portal screenshots of results
 ```
