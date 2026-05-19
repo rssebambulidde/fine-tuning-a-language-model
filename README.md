@@ -44,6 +44,21 @@ Building a travel agency chat application that:
 - **Deployment Info**: Model deployment details and access information
 - **Results Analysis**: Detailed findings and performance metrics
 
+## Project Files
+
+- [README.md](README.md) — Main project overview and quick summary
+- [SETUP.md](SETUP.md) — Step-by-step implementation guide
+- [FINDINGS.md](FINDINGS.md) — Detailed analysis and comparison
+- [QUICKSTART.md](QUICKSTART.md) — Short fast-start overview
+- [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) — File organization and navigation guide
+- [CONTRIBUTING.md](CONTRIBUTING.md) — Contribution guidelines
+- [LICENSE](LICENSE) — Project license and attribution
+- [training_data/travel-finetune-hotel.jsonl](training_data/travel-finetune-hotel.jsonl) — Fine-tuning dataset
+- [training_data/training_data_sample.md](training_data/training_data_sample.md) — Training data format examples
+- [results/metrics.md](results/metrics.md) — Training metrics and performance report
+- [results/base_model_responses.md](results/base_model_responses.md) — Base model test responses
+- [results/finetuned_model_responses.md](results/finetuned_model_responses.md) — Fine-tuned model test responses
+
 ## Project Results
 
 ### Training Metrics
