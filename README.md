@@ -13,6 +13,20 @@ Building a travel agency chat application that:
 - Avoids providing hotel/flight/restaurant bookings
 - Asks engaging questions to help users plan trips
 
+## Why This Project is Recruiter-Friendly
+- Demonstrates end-to-end AI project execution from dataset preparation to deployment
+- Shows ability to compare prompt engineering with fine-tuning and choose the right approach
+- Highlights practical experience with Microsoft Foundry and Azure AI model deployment
+- Illustrates strong technical writing and clear documentation for non-technical stakeholders
+
+## Skills Demonstrated
+- Model fine-tuning with GPT-4.1
+- Prompt engineering and behavior design
+- Dataset preparation in JSONL format
+- Model comparison, evaluation, and analysis
+- Azure Foundry deployment and monitoring
+- Technical documentation for project delivery
+
 ## Key Findings
 
 | Aspect | Base Model + Instructions | Fine-Tuned Model |
