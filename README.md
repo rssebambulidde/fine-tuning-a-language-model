@@ -2,6 +2,13 @@
 
 A hands-on demonstration of fine-tuning a language model with Microsoft Foundry to create a specialized travel assistant with consistent, engaging conversational behavior.
 
+## Project Highlights
+
+- 🚀 **End-to-end AI workflow**: dataset, fine-tuning, deployment, and evaluation
+- 🧠 **Technical expertise**: GPT-4.1 fine-tuning, prompt engineering, Azure Foundry
+- 📊 **Measurable results**: low loss (0.03), perfect token accuracy, successful deployment
+- 📝 **Recruiter-ready documentation**: clear project structure and direct file links
+
 ## Project Overview
 
 This project explores the difference between **prompt engineering** and **fine-tuning** by comparing a base GPT-4.1 model with instruction-based guidance to a fine-tuned version trained on curated travel assistant examples.
