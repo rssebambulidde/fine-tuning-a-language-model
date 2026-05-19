@@ -1,86 +1,52 @@
 # Fine-Tuning GPT-4.1 for Travel Assistant Chat Application
 
-A hands-on demonstration of fine-tuning a language model with Microsoft Foundry to create a specialized travel assistant with consistent, engaging conversational behavior.
+A hands-on project that combines dataset design, model customization, and deployment to build a travel assistant with a consistent, friendly conversational style.
 
 ## Project Highlights
 
 - 🚀 **End-to-end AI workflow**: dataset, fine-tuning, deployment, and evaluation
 - 🧠 **Technical expertise**: GPT-4.1 fine-tuning, prompt engineering, Azure Foundry
 - 📊 **Measurable results**: low loss (0.03), perfect token accuracy, successful deployment
-- 📝 **Clear documentation**: structured project files and direct links for easy review
+- 📝 **Clear documentation**: all major project content is included in this file for easy review
 
 ## What I Built
 
-I created a travel assistant chat application by fine-tuning GPT-4.1 on curated travel conversation examples, then compared that fine-tuned model with a prompt-engineered base model. This project highlights my ability to design data, execute training, evaluate model behavior, and document results clearly for both technical and non-technical audiences.
+I fine-tuned GPT-4.1 using travel conversation examples so that the model behaves like a helpful travel assistant. Then I compared it against a prompt-engineered base GPT-4.1 model to show how fine-tuning improves consistency, tone, and engagement.
 
-My goal was to show how practical AI work can be delivered in a polished way and to inspire others to build thoughtful, user-focused conversational experiences.
-
-## Project Overview
-
-This project explores the difference between **prompt engineering** and **fine-tuning** by comparing a base GPT-4.1 model with instruction-based guidance to a fine-tuned version trained on curated travel assistant examples.
-
-## Quick Access
-
-- [Project Summary](#project-overview)
-- [Skills Demonstrated](#skills-demonstrated)
-- [Project Results](#project-results)
-- [Setup Guide](SETUP.md)
-- [Evaluation & Findings](FINDINGS.md)
-- [Training Data](training_data/travel-finetune-hotel.jsonl)
-- [Model Responses](results/finetuned_model_responses.md)
-
-### Use Case
-Building a travel agency chat application that:
-- Suggests destinations and activities
-- Maintains consistent, friendly, inspiring tone
-- Avoids providing hotel/flight/restaurant bookings
-- Asks engaging questions to help users plan trips
+The project includes:
+- Training data preparation in JSONL format
+- Fine-tuning a model with Microsoft Foundry
+- Deploying the resulting model to a developer endpoint
+- Comparing responses from base and fine-tuned models
+- Explaining results in plain language for non-technical readers
 
 ## Why This Project Matters
-- Demonstrates end-to-end AI project execution from dataset preparation to deployment
-- Shows ability to compare prompt engineering with fine-tuning and choose the right approach
-- Highlights practical experience with Microsoft Foundry and Azure AI model deployment
-- Illustrates strong technical writing and clear documentation for stakeholders
+
+This project shows how to move from a general language model to a specialized assistant by teaching the model with examples. It also demonstrates how to:
+- choose between prompt engineering and fine-tuning,
+- measure performance with simple metrics,
+- keep the model aligned with the desired behavior,
+- document the process clearly for both technical and non-technical audiences.
 
 ## Skills Demonstrated
+
 - Model fine-tuning with GPT-4.1
 - Prompt engineering and behavior design
-- Dataset preparation in JSONL format
-- Model comparison, evaluation, and analysis
+- JSONL dataset preparation
+- Model evaluation and comparison
 - Azure Foundry deployment and monitoring
-- Technical documentation for project delivery
+- Writing clear, project-focused documentation
 
-## Key Findings
+## Project Summary: What This File Includes
 
-| Aspect | Base Model + Instructions | Fine-Tuned Model |
-|--------|--------------------------|-----------------|
-| **Tone** | Informative, generic | Enthusiastic, inspiring |
-| **Consistency** | Variable across responses | Consistent personality |
-| **Style** | Follows instructions | Embodies trained behavior |
-| **Engagement** | Direct recommendations | Engaging questions & exploration |
+This README now includes the full content from the other project files:
+- the complete setup and implementation steps
+- the full findings and analysis
+- the easy explanation of technical terms
+- the project timeline and results
+- the training data information
 
-## What's Included
-
-- **Fine-tuning Job Details**: Configuration, metrics, and training progress
-- **Model Comparison**: Side-by-side responses from base vs. fine-tuned models
-- **Training Data**: Reference to the JSONL dataset used for fine-tuning
-- **Deployment Info**: Model deployment details and access information
-- **Results Analysis**: Detailed findings and performance metrics
-
-## Project Files
-
-- [README.md](README.md) — Main project overview and quick summary
-- [SETUP.md](SETUP.md) — Step-by-step implementation guide
-- [FINDINGS.md](FINDINGS.md) — Detailed analysis and comparison
-- [QUICKSTART.md](QUICKSTART.md) — Short fast-start overview
-- [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) — File organization and navigation guide
-- [CONTRIBUTING.md](CONTRIBUTING.md) — Contribution guidelines
-- [LICENSE](LICENSE) — Project license and attribution
-- [training_data/travel-finetune-hotel.jsonl](training_data/travel-finetune-hotel.jsonl) — Fine-tuning dataset
-- [training_data/training_data_sample.md](training_data/training_data_sample.md) — Training data format examples
-- [results/metrics.md](results/metrics.md) — Training metrics and performance report
-- [results/base_model_responses.md](results/base_model_responses.md) — Base model test responses
-- [results/finetuned_model_responses.md](results/finetuned_model_responses.md) — Fine-tuned model test responses
+That means a reader can understand the whole project without leaving this file.
 
 ## Project Results
 
@@ -95,106 +61,214 @@ Building a travel agency chat application that:
 - **Deployment Type**: Developer
 - **Auto-Deployment**: Enabled
 
-## Getting Started
+### Evaluation Summary
+
+The fine-tuned model delivered responses that were:
+- warmer and more engaging,
+- more consistent in tone,
+- less likely to behave like a generic chatbot,
+- better aligned with the travel assistant goal.
+
+## What the Project Does
+
+This project builds a travel planning assistant that:
+- answers travel questions in a friendly, helpful tone,
+- avoids recommending hotels, flights, car rentals, and restaurants,
+- asks follow-up questions to clarify the user's travel preferences,
+- gives travel-focused guidance on destinations, weather, culture, and transport.
+
+## Full Implementation Guide
 
 ### Prerequisites
-- Azure subscription with Foundry access
-- Permissions to create AI resources
-- Supported regions: North Central US or Sweden Central
 
-### Steps to Implement
+Before starting, make sure you have:
+- an Azure subscription with permissions to create AI resources,
+- access to Microsoft Foundry at https://ai.azure.com,
+- a supported region for gpt-4.1 fine-tuning: North Central US or Sweden Central.
 
-1. **Create Foundry Project**
-   - Navigate to https://ai.azure.com
-   - Create a new project in a supported region
-   - Enable "New Foundry" if not already active
+### Step 1: Create the Foundry Project
 
-2. **Deploy Base Model**
-   - Search for `gpt-4.1` in model catalog
-   - Deploy using default settings
-   - Test with provided instructions
+1. Open the Foundry portal at https://ai.azure.com.
+2. Sign in with your Azure credentials.
+3. Create a new project.
+4. In the advanced options, choose a supported region:
+   - North Central US
+   - Sweden Central
+5. Accept the default Foundry resource name or customize it.
+6. Select a resource group, or create one.
+7. Wait for the project to finish provisioning.
 
-3. **Prepare Training Data**
-   - Download: [travel-finetune-hotel.jsonl](https://microsoftlearning.github.io/mslearn-ai-studio/data/travel-finetune-hotel.jsonl)
-   - Ensure .jsonl format (not .txt)
+### Step 2: Deploy the Base Model
 
-4. **Start Fine-tuning Job**
-   - Configuration: See [SETUP.md](SETUP.md)
-   - Monitoring: Check progress in Foundry portal
+1. Go to the model catalog in the Foundry portal.
+2. Search for `gpt-4.1`.
+3. Deploy the model using default settings.
+4. Wait for the deployment to complete and open the playground.
 
-5. **Compare Models**
-   - Test both with same queries
-   - Evaluate tone, consistency, and engagement
+### Step 3: Prepare the Training Data
 
-## Quick Test Queries
+This project includes the dataset file in `training_data/travel-finetune-hotel.jsonl`.
 
-Test both models with these questions:
-- "Where in Rome should I stay?"
-- "I'm mostly there for the food. Where should I stay to be within walking distance of affordable restaurants?"
-- "What are some local delicacies I should try?"
-- "When is the best time of year to visit in terms of the weather?"
-- "What's the best way to get around the city?"
+The dataset is in JSONL format, which means:
+- each line is one JSON object,
+- each object contains a `messages` list,
+- each message has a `role` and `content` field.
 
-## System Instructions Used
+Example of a single line in JSONL:
+
+```json
+{"messages": [{"role":"system","content":"You are an AI travel assistant..."},{"role":"user","content":"What's a must-see in Paris?"},{"role":"assistant","content":"Oh la la! You simply must..."}]}
+```
+
+If you download the dataset from the original source, make sure the file is saved with the `.jsonl` extension and not `.txt`.
+
+### Step 4: Start the Fine-Tuning Job
+
+1. In the Foundry portal, open the Fine-tune page.
+2. Click the `Fine-tune` button.
+3. Configure the job:
+   - Base model: `gpt-4.1`
+   - Customization method: `Supervised`
+   - Training type: `Standard`
+   - Training data: upload `travel-finetune-hotel.jsonl`
+   - Suffix: `ft-travel`
+   - Auto-deploy: enabled
+   - Deployment type: `Developer`
+4. Submit the job.
+5. Monitor progress in the `Monitor` tab.
+
+### Step 5: Test the Base Model
+
+While the fine-tuning runs, test the base GPT-4.1 model with the travel assistant instructions.
+
+Use these directions in the model instructions:
 
 ```
-You are an AI travel assistant that helps people plan their trips. Your objective is to offer 
-support for travel-related inquiries, such as visa requirements, weather forecasts, local attractions, 
+You are an AI travel assistant that helps people plan their trips. Your objective is to offer
+support for travel-related inquiries, such as visa requirements, weather forecasts, local attractions,
 and cultural norms.
 You should not provide any hotel, flight, rental car or restaurant recommendations.
 Ask engaging questions to help someone plan their trip and think about what they want to do on their holiday.
 ```
 
-## File Structure
+Then try these example queries:
+- Where in Rome should I stay?
+- I'm mostly there for the food. Where should I stay to be within walking distance of affordable restaurants?
+- What are some local delicacies I should try?
+- When is the best time of year to visit in terms of the weather?
+- What's the best way to get around the city?
 
-```
-├── README.md                    # This file
-├── SETUP.md                     # Detailed setup instructions
-├── FINDINGS.md                  # Detailed comparison & analysis
-├── results/
-│   ├── metrics.json            # Training metrics
-│   ├── base_model_responses.md  # Base model test results
-│   └── finetuned_model_responses.md  # Fine-tuned model test results
-├── training_data/
-│   ├── travel-finetune-hotel.jsonl  # Training data (use this file)
-│   └── training_data_sample.md      # Training data format explanation
-└── images/
-    └── screenshots/            # Portal screenshots of results
-```
+### Step 6: Test the Fine-Tuned Model
+
+1. Check the fine-tuning status and wait until it is completed.
+2. Open the deployed fine-tuned model.
+3. Set the same instructions as the base model.
+4. Run the same questions again.
+5. Compare the answers for tone, clarity, and consistency.
+
+### Step 7: Clean Up Resources
+
+To avoid unnecessary costs, delete the Azure resource group created for this project:
+1. Open the Azure Portal.
+2. Find the resource group.
+3. Select `Delete resource group`.
+4. Confirm the deletion.
+
+## Findings and Analysis
+
+### Training Results
+
+**What happened during training?**
+- The model was trained for 10 epochs.
+- The training loss decreased from around 4.5 to 0.03.
+- The model reached 100% token accuracy on the training data.
+
+**What does that mean?**
+- **Loss** measures how far the model's predictions are from the expected output. Lower is better.
+- **Token accuracy** measures how often the model predicts the correct next word piece. Higher is better.
+
+### Model Comparison
+
+The base model with instructions was useful, but its behavior changed from answer to answer. The fine-tuned model was more consistent and felt more like a single assistant personality.
+
+#### Example: Rome neighborhood question
+- Base model: gave many options and asked for clarification.
+- Fine-tuned model: gave a clear recommendation and asked a follow-up question naturally.
+
+#### Example: Food recommendations
+- Base model: structured and formal.
+- Fine-tuned model: enthusiastic, vivid, and more conversational.
+
+### Why the fine-tuned model was better
+
+Fine-tuning taught the model to adopt the travel assistant style directly. Prompt engineering only gives the model instructions; fine-tuning teaches it how to write those responses consistently.
+
+## Technical Terms Explained
+
+### Fine-tuning
+Fine-tuning means training an existing language model on new examples so it learns a new behavior. In this project, fine-tuning teaches the model how to sound like a travel assistant.
+
+### Prompt engineering
+Prompt engineering is writing instructions for the base model so it behaves in a desired way. It is useful, but it can be less consistent than fine-tuning.
+
+### JSONL
+JSONL is a file format where each line is a separate JSON object. This project uses JSONL to store training examples.
+
+### Training loss
+Loss is a number that shows how wrong the model is while learning. Near zero means the model is predicting well on the training data.
+
+### Token accuracy
+A token is a small piece of text, like a word or part of a word. Token accuracy measures how often the model predicts the next piece correctly.
+
+### Deployment
+Deployment means making the model available to use as a service. In this project, the fine-tuned model was deployed in Azure Foundry as a developer endpoint.
+
+## Training Data
+
+The project includes the training dataset file `training_data/travel-finetune-hotel.jsonl`.
+
+Each training example contains:
+- a system message that defines the assistant behavior,
+- a user question,
+- the assistant's desired response.
+
+This format teaches the model both what to answer and how to answer.
+
+## Simple Results Comparison
+
+| Metric | Base Model | Fine-Tuned Model |
+|--------|------------|------------------|
+| Tone | Informative | Friendly and engaging |
+| Consistency | Variable | Stable across questions |
+| Behavior | Instructed | Learned from examples |
+| Style | Formal | Natural and conversational |
 
 ## Time to Complete
 
 - Project setup: 5 minutes
 - Base model testing: 10 minutes
-- Fine-tuning job: 60-90 minutes (cloud dependent)
+- Fine-tuning job: 60-90 minutes
 - Fine-tuned model testing: 10 minutes
 - **Total: ~90 minutes**
 
 ## Key Learnings
 
-1. **Fine-tuning teaches behavior** - Training data creates intrinsic conversational patterns
-2. **Consistency matters** - Fine-tuned models maintain personality across interactions
-3. **Speed vs Quality** - Fine-tuning takes time but delivers superior results
-4. **Prompt engineering fallback** - Instructions still valuable for baseline behavior
+1. Fine-tuning makes behavior more consistent than instructions alone.
+2. Good training examples help the model learn tone and personality.
+3. Prompt engineering is useful for quick tests, but fine-tuning is better for production behavior.
+4. Clear documentation helps non-technical readers understand the project.
 
-## Resources
+## Next Steps
 
-- [Microsoft Foundry Documentation](https://learn.microsoft.com/foundry)
-- [Fine-tuning Guide](https://learn.microsoft.com/foundry/models/fine-tuning)
-- [GPT-4.1 Model Card](https://learn.microsoft.com/foundry/models/gpt-41)
-- [Training Data Format (JSONL)](https://jsonlines.org/)
+If you want to improve this project further, you can:
+- add more diverse travel examples to the training data,
+- evaluate the model with real user responses,
+- build a simple chat app using the deployed model,
+- add a small validation set to measure performance more formally.
 
-## Cleanup
+## Notes
 
-Delete Azure resources to avoid costs:
-1. Open Azure Portal
-2. Navigate to resource group
-3. Select "Delete resource group"
-4. Confirm deletion
-
-## Author Notes
-
-This project demonstrates the practical value of fine-tuning for specialized applications where consistency and specific behavioral patterns are critical. While prompt engineering provides quick baseline behavior, fine-tuning with curated examples creates models that truly understand your application's unique voice and requirements.
+This README now contains the complete guidance and analysis from the other project files, with technical terms explained in plain language. The remaining markdown files are preserved as backups, but all core project content is available here.
 
 ---
 
