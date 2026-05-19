@@ -6,7 +6,7 @@ Detailed findings comparing base model with prompt engineering vs. fine-tuned mo
 
 Fine-tuning GPT-4.1 with 10 epochs of curated travel assistant examples produced a model with **significantly more consistent, engaging, and personality-driven responses** compared to the base model with system instructions alone.
 
-## Recruiter Takeaways
+## Key Takeaways
 - Demonstrates strong applied AI skills in model fine-tuning and prompt engineering
 - Shows experience with production-style evaluation and comparison
 - Proves ability to document a complete project clearly for stakeholders and employers

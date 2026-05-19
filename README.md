@@ -7,7 +7,7 @@ A hands-on demonstration of fine-tuning a language model with Microsoft Foundry 
 - 🚀 **End-to-end AI workflow**: dataset, fine-tuning, deployment, and evaluation
 - 🧠 **Technical expertise**: GPT-4.1 fine-tuning, prompt engineering, Azure Foundry
 - 📊 **Measurable results**: low loss (0.03), perfect token accuracy, successful deployment
-- 📝 **Recruiter-ready documentation**: clear project structure and direct file links
+- 📝 **Clear documentation**: structured project files and direct links for easy review
 
 ## What I Built
 
@@ -19,7 +19,7 @@ My goal was to show how practical AI work can be delivered in a polished way and
 
 This project explores the difference between **prompt engineering** and **fine-tuning** by comparing a base GPT-4.1 model with instruction-based guidance to a fine-tuned version trained on curated travel assistant examples.
 
-## Quick Links for Recruiters
+## Quick Access
 
 - [Project Summary](#project-overview)
 - [Skills Demonstrated](#skills-demonstrated)
@@ -36,11 +36,11 @@ Building a travel agency chat application that:
 - Avoids providing hotel/flight/restaurant bookings
 - Asks engaging questions to help users plan trips
 
-## Why This Project is Recruiter-Friendly
+## Why This Project Matters
 - Demonstrates end-to-end AI project execution from dataset preparation to deployment
 - Shows ability to compare prompt engineering with fine-tuning and choose the right approach
 - Highlights practical experience with Microsoft Foundry and Azure AI model deployment
-- Illustrates strong technical writing and clear documentation for non-technical stakeholders
+- Illustrates strong technical writing and clear documentation for stakeholders
 
 ## Skills Demonstrated
 - Model fine-tuning with GPT-4.1
