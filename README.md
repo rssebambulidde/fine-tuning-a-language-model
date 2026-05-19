@@ -9,6 +9,12 @@ A hands-on demonstration of fine-tuning a language model with Microsoft Foundry 
 - 📊 **Measurable results**: low loss (0.03), perfect token accuracy, successful deployment
 - 📝 **Recruiter-ready documentation**: clear project structure and direct file links
 
+## What I Built
+
+I created a travel assistant chat application by fine-tuning GPT-4.1 on curated travel conversation examples, then compared that fine-tuned model with a prompt-engineered base model. This project highlights my ability to design data, execute training, evaluate model behavior, and document results clearly for both technical and non-technical audiences.
+
+My goal was to show how practical AI work can be delivered in a polished way and to inspire others to build thoughtful, user-focused conversational experiences.
+
 ## Project Overview
 
 This project explores the difference between **prompt engineering** and **fine-tuning** by comparing a base GPT-4.1 model with instruction-based guidance to a fine-tuned version trained on curated travel assistant examples.
