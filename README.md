@@ -266,6 +266,305 @@ If you want to improve this project further, you can:
 - build a simple chat app using the deployed model,
 - add a small validation set to measure performance more formally.
 
+## Quick Start
+
+This section embeds the quick-start guidance from the project’s summary file.
+
+### What Is This Project?
+
+This project demonstrates **fine-tuning a language model** (GPT-4.1) for a specialized use case: a travel agency chat application.
+
+### The Problem We Solved
+
+Building a travel chat that:
+- suggests destinations and activities,
+- uses consistent, friendly, inspiring tone,
+- never recommends hotels/flights/restaurants,
+- asks engaging questions.
+
+❌ **Prompt engineering alone** = inconsistent tone, mechanical behavior
+✓ **Fine-tuning with examples** = consistent personality, natural engagement
+
+### The Results (TL;DR)
+
+- Loss: 0.03 (very good)
+- Accuracy: 100%
+- Time: 1h 24m
+
+**What changed**
+
+| Metric | Base | Fine-tuned |
+|--------|------|-----------|
+| Tone | Neutral | Enthusiastic |
+| Consistency | Variable | Constant |
+| Personality | Instructed | Learned |
+| User Experience | Good | Excellent |
+
+### Example Comparison
+
+**Base Model Response**: Formal, structured, asking clarifying questions.
+
+**Fine-Tuned Model Response**: Friendly, immediately useful, engaging.
+
+### How to Implement (High Level)
+
+1. Create a Foundry project in North Central US or Sweden Central
+2. Deploy the base `gpt-4.1` model
+3. Test the base model with travel assistant instructions
+4. Start fine-tuning with `training_data/travel-finetune-hotel.jsonl`
+5. Wait 60-90 minutes
+6. Test the fine-tuned model with the same questions
+7. Compare responses and confirm the improved personality
+
+### Cost Note
+
+Azure resources used in this exercise can incur costs:
+- Foundry resource: ~$200-300
+- Model deployment: ~$0.50/day
+- Fine-tuning: ~$1-2 for this small job
+
+**Always delete resources when done** to avoid unnecessary charges.
+
+## Project Structure
+
+The project organization is documented here to make it easy to navigate.
+
+```
+github-project/
+├── README.md                          # Start here - project overview
+├── QUICKSTART.md                      # 5-minute quick overview
+├── SETUP.md                           # Detailed setup instructions
+├── FINDINGS.md                        # Detailed analysis & comparison
+├── CONTRIBUTING.md                    # How to contribute
+├── LICENSE                            # MIT License
+├── .gitignore                         # Git ignore rules
+├── PROJECT_STRUCTURE.md               # This file
+│
+├── results/
+│   ├── metrics.md                     # Training metrics & performance data
+│   ├── base_model_responses.md        # Base model test results
+│   └── finetuned_model_responses.md   # Fine-tuned model test results
+│
+└── training_data/
+    └── training_data_sample.md        # Training data format & samples
+```
+
+### File Descriptions
+
+- `README.md` — Main project overview and consolidated documentation.
+- `QUICKSTART.md` — Rapid 5-minute summary for fast onboarding.
+- `SETUP.md` — Step-by-step replication guide.
+- `FINDINGS.md` — Detailed training results and comparative analysis.
+- `CONTRIBUTING.md` — Contribution guidelines and community expectations.
+- `PROJECT_STRUCTURE.md` — Guide to the repository layout.
+- `results/` — Saved metrics and response comparisons.
+- `training_data/` — Training dataset and format samples.
+
+### Reading Paths
+
+**Fast overview**
+1. READMEs
+2. QUICKSTART.md
+3. results/finetuned_model_responses.md
+
+**Implement the project**
+1. README.md
+2. SETUP.md
+3. FINDINGS.md
+
+**Deep technical dive**
+1. README.md
+2. FINDINGS.md
+3. results/metrics.md
+4. results/base_model_responses.md
+5. results/finetuned_model_responses.md
+6. training_data/training_data_sample.md
+
+## Contributing
+
+This project is an educational demonstration of fine-tuning language models.
+
+### How to Contribute
+
+#### Report Issues
+- Found a bug or unclear instruction?
+- Issues with replicating the exercise?
+- Create an issue with:
+  - clear description,
+  - steps to reproduce,
+  - your environment (region, model, etc.),
+  - expected vs. actual behavior.
+
+#### Improve Documentation
+- Spotted a typo?
+- Have clearer explanations?
+- Add missing information?
+- Submit a pull request with improvements.
+
+#### Share Your Results
+- Successfully replicated the exercise?
+- Found interesting variations?
+- Create a discussion post with:
+  - your setup details,
+  - results you observed,
+  - any modifications you made.
+
+#### Suggest Enhancements
+- Ideas for additional experiments?
+- Different training data to try?
+- Variations to test?
+- Submit issues or discussions with detailed suggestions.
+
+### Contribution Guidelines
+
+1. **Fork** the repository
+2. **Create a branch** for your changes
+3. **Make clear commits** with descriptive messages
+4. **Test** any instructions you modify
+5. **Submit a pull request** with a description of changes
+
+### For Issues
+- Be specific and reproducible
+- Include environment details
+- Provide examples where helpful
+- Be respectful and constructive
+
+### For Discussions
+- Share findings and insights
+- Ask questions about the exercise
+- Help others who are replicating
+- Keep discussions focused and respectful
+
+### Project Goals
+This project aims to:
+- teach fine-tuning concepts through hands-on experience,
+- demonstrate prompt engineering vs. fine-tuning,
+- provide reusable documentation,
+- build a community around AI model customization.
+
+### Community Standards
+- Be respectful and inclusive
+- Provide constructive feedback
+- Help others learn and succeed
+- Share knowledge generously
+- Keep discussions professional
+
+### Recognition
+Contributors will be recognized in:
+- this CONTRIBUTING.md file,
+- project README,
+- commit history.
+
+## Training Data Sample
+
+This section includes the sample training data details from the training data documentation.
+
+### Dataset Format
+
+The training dataset uses JSONL (JSON Lines) format — one JSON object per line. Each record follows the OpenAI messages format with `system`, `user`, and `assistant` roles.
+
+### Example Training Records
+
+#### Example 1
+```json
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an AI travel assistant that helps people plan their trips. Your objective is to offer support for travel-related inquiries, such as visa requirements, weather forecasts, local attractions, and cultural norms. You should not provide any hotel, flight, rental car or restaurant recommendations. Ask engaging questions to help someone plan their trip and think about what they want to do on their holiday."
+    },
+    {
+      "role": "user",
+      "content": "What's a must-see in Paris?"
+    },
+    {
+      "role": "assistant",
+      "content": "Oh la la! You simply must twirl around the Eiffel Tower and snap a chic selfie! After that, consider visiting the Louvre Museum to see the Mona Lisa and other masterpieces. What type of attractions are you most interested in?"
+    }
+  ]
+}
+```
+
+#### Example 2
+```json
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an AI travel assistant that helps people plan their trips. Your objective is to offer support for travel-related inquiries, such as visa requirements, weather forecasts, local attractions, and cultural norms. You should not provide any hotel, flight, rental car or restaurant recommendations. Ask engaging questions to help someone plan their trip and think about what they want to do on their holiday."
+    },
+    {
+      "role": "user",
+      "content": "What's the best way to get around Tokyo?"
+    },
+    {
+      "role": "assistant",
+      "content": "Tokyo has an amazing public transportation system! The trains and subways are incredibly efficient, clean, and easy to navigate. You can get almost anywhere quickly and affordably. Many locals use the IC card system for seamless travel. Are you interested in exploring traditional temples, modern technology, or vibrant neighborhoods?"
+    }
+  ]
+}
+```
+
+#### Example 3
+```json
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an AI travel assistant that helps people plan their trips. Your objective is to offer support for travel-related inquiries, such as visa requirements, weather forecasts, local attractions, and cultural norms. You should not provide any hotel, flight, rental car or restaurant recommendations. Ask engaging questions to help someone plan their trip and think about what they want to do on their holiday."
+    },
+    {
+      "role": "user",
+      "content": "When should I visit Barcelona?"
+    },
+    {
+      "role": "assistant",
+      "content": "Barcelona is wonderful year-round, but spring (April-May) and fall (September-October) offer the best weather! You get sunshine without the intense summer heat. The city is less crowded during these periods too. Are you more interested in beach time, architectural marvels like Gaudí's works, or lively cultural events?"
+    }
+  ]
+}
+```
+
+### Training Data Characteristics
+
+1. **Consistent System Message**
+   - Same instructions in every example
+   - Defines travel assistant behavior and constraints
+
+2. **Enthusiastic, Engaging Tone**
+   - Natural excitement and vivid descriptions
+   - Conversational language with exclamation points
+
+3. **Question-Asking Pattern**
+   - Each response ends with a follow-up question
+   - Encourages user preference details
+
+4. **Adherence to Constraints**
+   - No hotels, flights, cars, or restaurant recommendations
+
+5. **Variety of Query Types**
+   - Must-see attractions
+   - Transportation advice
+   - Best time to visit
+   - Cultural and neighborhood guidance
+
+### Data Summary
+
+- Format: JSONL
+- Records: multiple examples
+- Tokens billed: ~16,000 for training
+- Epochs: 10
+- Final training loss: 0.03
+
+### How This Data Shapes the Model
+
+The dataset teaches the model to:
+1. answer with personality,
+2. keep constraints,
+3. ask good questions,
+4. be conversational,
+5. provide value immediately.
+
 ## Notes
 
 This README now contains the complete guidance and analysis from the other project files, with technical terms explained in plain language. The remaining markdown files are preserved as backups, but all core project content is available here.
