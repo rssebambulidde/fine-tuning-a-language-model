@@ -215,7 +215,7 @@ Purpose: Documentation about training data format and samples
 
 ---
 
-### Path 2: "I want to replicate the exercise"
+### Path 2: "I want to implement this project"
 1. README.md (10 min)
 2. SETUP.md (30 min reading, ~90 min doing)
 3. FINDINGS.md (20 min to compare your results)
@@ -293,7 +293,7 @@ README.md (start here)
 **Best files**: README.md, QUICKSTART.md, FINDINGS.md  
 **Why**: Conceptual and practical understanding
 
-### Scenario 5: Replicating the Project
+### Scenario 5: Implementing the Project
 **Best files**: SETUP.md (primary), FINDINGS.md (validation)  
 **Why**: Instructions and comparison framework
 

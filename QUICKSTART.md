@@ -56,7 +56,7 @@ Building a travel chat that:
 
 *Tone: Friendly, immediately useful, engaging*
 
-## How to Replicate (High Level)
+## How to Implement (High Level)
 
 1. **Create Foundry Project** (5 min)
    - Sign in to https://ai.azure.com
@@ -71,7 +71,7 @@ Building a travel chat that:
    - Notice inconsistent tone
 
 4. **Start Fine-tuning** (2 min)
-   - Download training data
+   - Download training data (or use sample from [training_data/training_data_sample.md](training_data/training_data_sample.md))
    - Submit fine-tuning job
    - **Wait: 60-90 minutes**
 
@@ -146,7 +146,7 @@ Refer to:
 ---
 
 **Time to read this**: 5 minutes  
-**Time to replicate**: 90 minutes  
+**Time to implement**: 90 minutes  
 **Value delivered**: Understanding fine-tuning vs. prompt engineering  
 
 **Ready? Start with [SETUP.md](SETUP.md)!**

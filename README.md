@@ -30,7 +30,7 @@ Building a travel agency chat application that:
 - **Deployment Info**: Model deployment details and access information
 - **Results Analysis**: Detailed findings and performance metrics
 
-## Exercise Results
+## Project Results
 
 ### Training Metrics
 - **Final Train Loss**: 0.03 ✓
@@ -50,7 +50,7 @@ Building a travel agency chat application that:
 - Permissions to create AI resources
 - Supported regions: North Central US or Sweden Central
 
-### Steps to Replicate
+### Steps to Implement
 
 1. **Create Foundry Project**
    - Navigate to https://ai.azure.com
@@ -109,7 +109,7 @@ Ask engaging questions to help someone plan their trip and think about what they
     └── screenshots/            # Portal screenshots of results
 ```
 
-## Estimated Time
+## Time to Complete
 
 - Project setup: 5 minutes
 - Base model testing: 10 minutes
@@ -146,4 +146,4 @@ This exercise demonstrates the practical value of fine-tuning for specialized ap
 ---
 
 **Last Updated**: May 19, 2026  
-**Status**: ✓ Exercise Completed Successfully
+**Status**: ✓ Project Completed Successfully
