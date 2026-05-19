@@ -141,7 +141,7 @@ Delete Azure resources to avoid costs:
 
 ## Author Notes
 
-This exercise demonstrates the practical value of fine-tuning for specialized applications where consistency and specific behavioral patterns are critical. While prompt engineering provides quick baseline behavior, fine-tuning with curated examples creates models that truly understand your application's unique voice and requirements.
+This project demonstrates the practical value of fine-tuning for specialized applications where consistency and specific behavioral patterns are critical. While prompt engineering provides quick baseline behavior, fine-tuning with curated examples creates models that truly understand your application's unique voice and requirements.
 
 ---
 
